@@ -40,7 +40,7 @@ namespace Elmah.Everywhere.Diagnostics.Test
             ExceptionHandler.ConfigureFromConfigurationFile(writter, null);
            
             // Assert
-            Assert.Equal("http://localhost:11079/error/log", writter.RequestUri.ToString());
+            Assert.Equal("http://localhost/Elmah.Everywhere.WebSite/error/log", writter.RequestUri.ToString());
         }
 
         [Fact]
@@ -85,7 +85,7 @@ namespace Elmah.Everywhere.Diagnostics.Test
             // Arrange
             ExceptionDefaults parameters = new ExceptionDefaults
                                                {
-                                                   RemoteLogUri = new Uri("http://localhost:11079/error/log")
+                                                   RemoteLogUri = new Uri("http://localhost/Elmah.Everywhere.WebSite/error/log")
                                                };
             TestableExceptionWritter writter = new TestableExceptionWritter();
 
@@ -109,7 +109,7 @@ namespace Elmah.Everywhere.Diagnostics.Test
             ExceptionDefaults parameters = new ExceptionDefaults
                                                {
                                                    Token = "Test-Token",
-                                                   RemoteLogUri = new Uri("http://localhost:11079/error/log")
+                                                   RemoteLogUri = new Uri("http://localhost/Elmah.Everywhere.WebSite/error/log")
                                                };
             TestableExceptionWritter writter = new TestableExceptionWritter();
 
@@ -129,7 +129,7 @@ namespace Elmah.Everywhere.Diagnostics.Test
             ExceptionDefaults parameters = new ExceptionDefaults
             {
                 Token = "Test-Token",
-                RemoteLogUri = new Uri("http://localhost:11079/error/log")
+                RemoteLogUri = new Uri("http://localhost/Elmah.Everywhere.WebSite/error/log")
             };
 
             bool completed = false;

@@ -28,14 +28,14 @@ namespace Console_Sample
         {
             var writter = new HttpExceptionWritter
             {
-                RequestUri = new Uri("http://localhost:11079/error/log", UriKind.Absolute)
+                RequestUri = new Uri("http://localhost/Elmah.Everywhere.WebSite/error/log", UriKind.Absolute)
             };
 
             var defaults = new ExceptionDefaults
             {
                 Token = "Test-Token",
                 ApplicationName = "Console-Sample",
-                Host = Environment.MachineName
+                Host = string.Format("{0}-ConsoleApp", Environment.MachineName)
             };
 
             ExceptionHandler.Configure(writter, defaults, null);

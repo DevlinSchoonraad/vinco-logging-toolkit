@@ -174,7 +174,7 @@ namespace Elmah.Everywhere.Diagnostics
             section.ApplicationName = "Default-Handler";
             section.Host = "Default-Handler";
             section.Token = "Default-Handler";
-            section.RemoteLogUri = "http://localhost:11079/error/log";
+            section.RemoteLogUri = "http://localhost/Elmah.Everywhere.WebSite/error/log";
             return section;
         }
 

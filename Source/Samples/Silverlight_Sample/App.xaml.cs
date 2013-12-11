@@ -31,7 +31,7 @@ namespace Silverlight_Sample
             var writter = new ClientHttpExceptionWritter
             {
                 // NOTE: Possible to pass URI by startup arguments.
-                RequestUri = new Uri("http://localhost:11079/error/log", UriKind.Absolute)
+                RequestUri = new Uri("http://localhost/Elmah.Everywhere.WebSite/error/log", UriKind.Absolute)
             };
 
             var defaults = new ExceptionDefaults

@@ -19,7 +19,9 @@ namespace Elmah.Everywhere
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{*favicon}", new { favicon = @"(.*/)?favicon.ico(/.*)?" });
-
+            routes.IgnoreRoute("{*allaspx}", new {allaspx=@".*\.aspx(/.*)?"});
+            routes.IgnoreRoute("{*robotstxt}", new { robotstxt = @"(.*/)?robots.txt(/.*)?" });
+            
             routes.MapRoute(
                 "Elmah", // Route name
                 "{controller}/{action}/{type}", // URL with parameters
